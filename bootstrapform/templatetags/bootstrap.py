@@ -18,6 +18,11 @@ def bootstrap_inline(element):
     markup_classes = {'label': 'sr-only', 'value': '', 'single_value': ''}
     return render(element, markup_classes)
 
+@register.filter
+def bootstrap_row(element):
+    markup_classes = {'label': 'sr-only', 'value': '', 'single_value': '', 'formgroup': 'row'}
+    return render(element, markup_classes)
+
 
 @register.filter
 def bootstrap_horizontal(element, label_cols='col-sm-2 col-lg-2'):
